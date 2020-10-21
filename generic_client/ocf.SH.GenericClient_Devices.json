@@ -1,0 +1,35 @@
+[
+  {
+    "field_ocf_spec_version": "core.1.1.0",
+    "field_supported_vertical_profile": "SmartHome",
+    "devices": [
+      "oic.d.camera",
+      "oic.d.door",
+      "oic.d.dryer",
+      "oic.d.garagedoor",
+      "oic.d.sensor",
+      "oic.d.oven",
+      "oic.d.multifunctionprinter",
+      "oic.d.receiver",
+      "oic.d.smartlock"
+    ]
+  },
+  {
+    "field_ocf_spec_version": "ocf.1.0.0",
+    "field_supported_vertical_profile": "SmartHome",
+    "devices": [
+      "oic.d.airqualitymonitor",
+      "oic.d.camera",
+      "oic.d.cookerhood",
+      "oic.d.cooktop",
+      "oic.d.dehumidifier",
+      "oic.d.door",
+      "oic.d.garagedoor",
+      "oic.d.sensor",
+      "oic.d.oven",
+      "oic.d.multifunctionprinter",
+      "oic.d.receiver",
+      "oic.d.smartlock"
+    ]
+  }
+]
