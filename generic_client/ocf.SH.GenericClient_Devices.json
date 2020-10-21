@@ -175,5 +175,33 @@
       "oic.d.receiver",
       "oic.d.smartlock"
     ]
+  },
+    {
+    "field_ocf_spec_version": "ocf.2.2.0",
+    "field_supported_vertical_profile": "SmartHome",
+    "devices": [
+      "oic.d.3dprinter",
+	  "oic.d.airer",
+	  "oic.d.airqualitymonitor",
+      "oic.d.camera",
+      "oic.d.cookerhood",
+      "oic.d.cooktop",
+      "oic.d.dehumidifier",
+      "oic.d.door",
+	  "oic.d.electricvehiclecharger",
+	  "oic.d.electricmeter",
+	  "oic.d.energygenerator",
+	  "oic.d.energymonitor",
+      "oic.d.garagedoor",
+	  "oic.d.grinder",
+	  "oic.d.gfci",
+      "oic.d.oven",
+      "oic.d.multifunctionprinter",
+      "oic.d.receiver",
+	  "oic.d.robotcleaner",
+      "oic.d.smartlock",
+	  "oic.d.steamcloset",
+	  "oic.d.waterpurifier"
+    ]
   }
 ]
