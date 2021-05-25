@@ -4,9 +4,9 @@
     "devicetype": "oic.d.test-module-actuator",
     "vertical":   "Module",
     "resources": [
-      {"resourcetypetitle": "Query Test", "resourcetypeid": "oic.r.test-query"},
-      {"resourcetypetitle": "Range Test", "resourcetypeid": "oic.r.test-range"},
-      {"resourcetypetitle": "Variant Test (multiple types)", "resourcetypeid": "oic.r.test-variant"}
+      {"resourcetypetitle": "Query Test", "resourcetypeid": "oic.r.test_query"},
+      {"resourcetypetitle": "Range Test", "resourcetypeid": "oic.r.test_range"},
+      {"resourcetypetitle": "Variant Test (multiple types)", "resourcetypeid": "oic.r.test_variant"}
     ]
   },
   {
@@ -14,7 +14,7 @@
     "devicetype": "oic.d.test-module-sensor",
     "vertical":   "Module",
     "resources": [
-      {"resourcetypetitle": "Sensor Test", "resourcetypeid": "oic.r.test-sensor"}
+      {"resourcetypetitle": "Sensor Test", "resourcetypeid": "oic.r.test_sensor"}
     ]
   }
 ]
