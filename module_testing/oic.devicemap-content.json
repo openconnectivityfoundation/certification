@@ -1,7 +1,7 @@
 [
   {
     "devicename": "Module Test - Actuator Device",
-    "devicetype": "oic.d.test-module-actuator",
+    "devicetype": "oic.d.test_module_actuator",
     "vertical":   "Module",
     "resources": [
       {"resourcetypetitle": "Query Test", "resourcetypeid": "oic.r.test_query"},
@@ -11,7 +11,7 @@
   },
   {
     "devicename": "Module Test - Sensor Device",
-    "devicetype": "oic.d.test-module-sensor",
+    "devicetype": "oic.d.test_module_sensor",
     "vertical":   "Module",
     "resources": [
       {"resourcetypetitle": "Sensor Test", "resourcetypeid": "oic.r.test_sensor"}
