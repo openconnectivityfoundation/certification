@@ -16,17 +16,17 @@
   "paths": {
     "/QueryTestResURI" : {
       "get": {
-        "description": "This resource describes a test resource with a optional query parameter. using the query_value set the value of the query_value property in the resource",
+        "description": "This resource describes a test resource with a optional query parameter. using the queryvalue set the value of the queryvalue property in the resource",
         "parameters": [
           {"$ref": "#/parameters/interface"},
           {
             "in": "query",
-            "description": "query_value, only using A, B and C",
+            "description": "queryvalue, only using A, B and C",
             "type": "string",
             "enum": ["A", "B", "C"],
-            "name": "query_value",
+            "name": "queryvalue",
             "default": "C",
-            "x-queryexample" : "/QueryTestResURI?query_value=A"
+            "x-queryexample" : "/QueryTestResURI?queryvalue=A"
           }
         ],
         "responses": {
@@ -56,7 +56,7 @@
         }
       },
       "post": {
-        "description": "Sets the desired value.\nIf a query_value is included and the server does not support the query_value indicated the request will fail.\nIf the query_value are omitted the value is taken to be 'C'.\n",
+        "description": "Sets the desired value.\nIf a queryvalue is included and the server does not support the queryvalue indicated the request will fail.\nIf the queryvalue are omitted the value is taken to be 'C'.\n",
         "parameters": [
           {"$ref": "#/parameters/interface"},
           {
@@ -71,10 +71,11 @@
           },
           {
             "in": "query",
-            "description": "query_value, only using A, B and C",
+            "description": "queryvalue, only using A, B and C",
             "type": "string",
             "enum": ["A", "B", "C"],
-            "name": "query_value",
+            "name": "queryvalue",
+            "default": "C",
             "x-queryexample" : "/QueryTestResURI?queryvalue=A"
           }
         ],
@@ -92,7 +93,7 @@
               "x-example":
                 {
                   "value": 20.0,
-                  "query_value": "C",
+                  "queryvalue": "C",
                   "range": [0.0, 100.0]
                 },
               "schema": { "$ref": "#/definitions/Query-Definition" }
