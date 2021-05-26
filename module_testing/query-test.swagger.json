@@ -25,6 +25,7 @@
             "type": "string",
             "enum": ["A", "B", "C"],
             "name": "query_value",
+            "default": "C",
             "x-queryexample" : "/QueryTestResURI?query_value=A"
           }
         ],
