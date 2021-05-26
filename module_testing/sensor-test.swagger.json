@@ -25,13 +25,13 @@
               "description" : "",
               "x-example":
                 {
-                  "rt": ["oic.r.test_sensor"],
+                  "rt": ["oic.r.test.sensor"],
                   "if": ["oic.if.s", "oic.if.baseline"],
                   "id": "unique_example_id",
-                  "value_integer": 75,
-                  "value_number": 79.5,
-                  "value_string": "my value",
-                  "value_boolean": false
+                  "valueinteger": 75,
+                  "valuenumber": 79.5,
+                  "valuestring": "my value",
+                  "valueboolean": false
                 },
               "schema": { "$ref": "#/definitions/payloaddef" }
             }
@@ -55,30 +55,30 @@
           "items": {
             "maxLength": 64,
             "type": "string",
-            "enum": ["oic.r.test_sensor"]
+            "enum": ["oic.r.test.sensor"]
           },
           "minItems": 1,
           "uniqueItems": true,
           "readOnly": true,
           "type": "array"
         },
-        "value_boolean" : {
+        "valueboolean" : {
           "description": "on/off",
           "type": "boolean"
         },
-        "value_integer" : {
+        "valueinteger" : {
           "description": "value integer.",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"
         },
-        "value_number" : {
+        "valuenumber" : {
           "description": "value number.",
           "maximum": 100.0,
           "minimum": 0.0,
           "type": "number"
         },
-        "value_string" : {
+        "valuestring" : {
           "description": "value string.",
           "type": "string"
         },
@@ -104,7 +104,7 @@
         }
       },
       "type" : "object",
-      "required": ["value_string", "value_boolean","value_integer", "value_number"]
+      "required": ["valuestring", "valueboolean","valueinteger", "valuenumber"]
     }
   }
 }

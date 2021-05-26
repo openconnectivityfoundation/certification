@@ -33,11 +33,11 @@
               "description" : "",
               "x-example":
                 {
-                  "rt": ["oic.r.test_query"],
+                  "rt": ["oic.r.test.query"],
                   "if": ["oic.if.a", "oic.if.baseline"],
                   "id": "unique_example_id",
                   "value": 20.0,
-                  "query_value": "C",
+                  "queryvalue": "C",
                   "range": [0.0, 100.0]
                 }
                 ,
@@ -48,7 +48,7 @@
               "x-example":
                 {
                   "value": 20.0,
-                  "query_value": "C"
+                  "queryvalue": "C"
                 },
               "schema": { "$ref": "#/definitions/Query-Definition" }
             }
@@ -74,7 +74,7 @@
             "type": "string",
             "enum": ["A", "B", "C"],
             "name": "query_value",
-            "x-queryexample" : "/QueryTestResURI?query_value=A"
+            "x-queryexample" : "/QueryTestResURI?queryvalue=A"
           }
         ],
         "responses": {
@@ -116,7 +116,7 @@
           "items": {
             "maxLength": 64,
             "type": "string",
-            "enum": ["oic.r.test_query"]
+            "enum": ["oic.r.test.query"]
           },
           "minItems": 1,
           "uniqueItems": true,
@@ -127,7 +127,7 @@
           "description": "Current setting or measurement",
           "type": "number"
         },
-        "query_value" :  {
+        "queryvalue" :  {
           "description": "query param",
           "enum": [
             "A",

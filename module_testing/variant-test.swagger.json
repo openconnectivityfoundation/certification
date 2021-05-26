@@ -6,7 +6,7 @@
     "license": {
       "name": "OCF Data Model License",
       "url": "https://github.com/openconnectivityfoundation/core/blob/e28a9e0a92e17042ba3e83661e4c0fbce8bdc4ba/LICENSE.md",
-      "x-copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved."
+      "x-copyright": "copyright 2019-2021 Open Connectivity Foundation, Inc. All rights reserved."
     },
     "termsOfService": "https://openconnectivityfoundation.github.io/core/DISCLAIMER.md"
   },
@@ -25,13 +25,13 @@
               "description" : "",
               "x-example":
                 {
-                  "rt": ["oic.r.test_variant"],
+                  "rt": ["oic.r.test.variant"],
                   "if" : ["oic.if.a", "oic.if.baseline"],
                   "id": "unique_example_id",
-                  "value_integer": 75,
-                  "value_number": 79.5,
-                  "value_string": "my value",
-                  "value_boolean": false
+                  "valueinteger": 75,
+                  "valuenumber": 79.5,
+                  "valuestring": "my value",
+                  "valueboolean": false
                 },
               "schema": { "$ref": "#/definitions/payloaddef" }
             }
@@ -48,10 +48,10 @@
             "schema": { "$ref": "#/definitions/payloaddef" },
             "x-example":
               {
-                "value_integer": 75,
-                "value_number": 79.5,
-                "value_string": "my value",
-                "value_boolean": false
+                "valueinteger": 75,
+                "valuenumber": 79.5,
+                "valuestring": "my value",
+                "valueboolean": false
               }
           }
         ],
@@ -60,10 +60,10 @@
               "description" : "",
               "x-example":
                 {
-                  "value_integer": 75,
-                  "value_number": 79.5,
-                  "value_string": "my value",
-                  "value_boolean": false
+                  "valueinteger": 75,
+                  "valuenumber": 79.5,
+                  "valuestring": "my value",
+                  "valueboolean": false
                 },
               "schema": { "$ref": "#/definitions/payloaddef" }
             }
@@ -87,30 +87,30 @@
           "items": {
             "maxLength": 64,
             "type": "string",
-            "enum": ["oic.r.test_variant"]
+            "enum": ["oic.r.test.variant"]
           },
           "minItems": 1,
           "uniqueItems": true,
           "readOnly": true,
           "type": "array"
         },
-        "value_boolean" : {
+        "valueboolean" : {
           "description": "on/off",
           "type": "boolean"
         },
-        "value_integer" : {
+        "valueinteger" : {
           "description": "value integer.",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"
         },
-        "value_number" : {
+        "valuenumber" : {
           "description": "value number.",
           "maximum": 100.0,
           "minimum": 0.0,
           "type": "number"
         },
-        "value_string" : {
+        "valuestring" : {
           "description": "value string, using a different length than the default lenght.",
           "maxLength": 100,
           "type": "string"
@@ -137,7 +137,7 @@
         }
       },
       "type" : "object",
-      "required": ["value_string", "value_boolean","value_integer", "value_number"]
+      "required": ["valuestring", "valueboolean","valueinteger", "valuenumber"]
     }
   }
 }
