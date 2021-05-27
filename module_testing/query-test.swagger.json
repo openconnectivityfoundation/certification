@@ -2,11 +2,11 @@
   "swagger": "2.0",
   "info": {
     "title": "Query-Test",
-    "version": "2019-06-13",
+    "version": "2021-05-21",
     "license": {
       "name": "OCF Data Model License",
       "url": "https://github.com/openconnectivityfoundation/core/blob/e28a9e0a92e17042ba3e83661e4c0fbce8bdc4ba/LICENSE.md",
-      "x-copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved."
+      "x-copyright": "copyright 2019-2021 Open Connectivity Foundation, Inc. All rights reserved."
     },
     "termsOfService": "https://openconnectivityfoundation.github.io/core/DISCLAIMER.md"
   },
@@ -16,16 +16,17 @@
   "paths": {
     "/QueryTestResURI" : {
       "get": {
-        "description": "This resource describes a test resource with a optional query parameter. using the query-value set the value of the query-value property in the resource",
+        "description": "This resource describes a test resource with a optional query parameter. using the queryvalue set the value of the queryvalue property in the resource",
         "parameters": [
           {"$ref": "#/parameters/interface"},
           {
             "in": "query",
-            "description": "query-value, only using A, B and C",
+            "description": "queryvalue, only using A, B and C",
             "type": "string",
             "enum": ["A", "B", "C"],
-            "name": "query-value",
-            "x-queryexample" : "/QueryTestResURI?query-value=A"
+            "name": "queryvalue",
+            "default": "C",
+            "x-queryexample" : "/QueryTestResURI?queryvalue=A"
           }
         ],
         "responses": {
@@ -33,11 +34,11 @@
               "description" : "",
               "x-example":
                 {
-                  "rt": ["oic.r.test-query"],
+                  "rt": ["oic.r.test.query"],
                   "if": ["oic.if.a", "oic.if.baseline"],
                   "id": "unique_example_id",
                   "value": 20.0,
-                  "query-value": "C",
+                  "queryvalue": "C",
                   "range": [0.0, 100.0]
                 }
                 ,
@@ -48,14 +49,14 @@
               "x-example":
                 {
                   "value": 20.0,
-                  "query-value": "C"
+                  "queryvalue": "C"
                 },
               "schema": { "$ref": "#/definitions/Query-Definition" }
             }
         }
       },
       "post": {
-        "description": "Sets the desired value.\nIf a query-value is included and the server does not support the query-value indicated the request will fail.\nIf the query-value are omitted the value is taken to be 'C'.\n",
+        "description": "Sets the desired value.\nIf a queryvalue is included and the server does not support the queryvalue indicated the request will fail.\nIf the queryvalue are omitted the value is taken to be 'C'.\n",
         "parameters": [
           {"$ref": "#/parameters/interface"},
           {
@@ -70,11 +71,12 @@
           },
           {
             "in": "query",
-            "description": "query-value, only using A, B and C",
+            "description": "queryvalue, only using A, B and C",
             "type": "string",
             "enum": ["A", "B", "C"],
-            "name": "query-value",
-            "x-queryexample" : "/QueryTestResURI?query-value=A"
+            "name": "queryvalue",
+            "default": "C",
+            "x-queryexample" : "/QueryTestResURI?queryvalue=A"
           }
         ],
         "responses": {
@@ -91,7 +93,7 @@
               "x-example":
                 {
                   "value": 20.0,
-                  "query-value": "C",
+                  "queryvalue": "C",
                   "range": [0.0, 100.0]
                 },
               "schema": { "$ref": "#/definitions/Query-Definition" }
@@ -116,7 +118,7 @@
           "items": {
             "maxLength": 64,
             "type": "string",
-            "enum": ["oic.r.test-query"]
+            "enum": ["oic.r.test.query"]
           },
           "minItems": 1,
           "uniqueItems": true,
@@ -127,7 +129,7 @@
           "description": "Current setting or measurement",
           "type": "number"
         },
-        "query-value" :  {
+        "queryvalue" :  {
           "description": "query param",
           "enum": [
             "A",

@@ -2,11 +2,11 @@
   "swagger": "2.0",
   "info": {
     "title": "test sensor",
-    "version": "2019-06-13",
+    "version": "2021-05-25",
     "license": {
       "name": "OCF Data Model License",
       "url": "https://github.com/openconnectivityfoundation/core/blob/e28a9e0a92e17042ba3e83661e4c0fbce8bdc4ba/LICENSE.md",
-      "x-copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved."
+      "x-copyright": "copyright 2019-2021 Open Connectivity Foundation, Inc. All rights reserved."
     },
     "termsOfService": "https://openconnectivityfoundation.github.io/core/DISCLAIMER.md"
   },
@@ -25,13 +25,13 @@
               "description" : "",
               "x-example":
                 {
-                  "rt": ["oic.r.test-sensor"],
+                  "rt": ["oic.r.test.sensor"],
                   "if": ["oic.if.s", "oic.if.baseline"],
                   "id": "unique_example_id",
-                  "value-integer": 75,
-                  "value-number": 79.5,
-                  "value-string": "my value",
-                  "value-boolean": false
+                  "valueinteger": 75,
+                  "valuenumber": 79.5,
+                  "valuestring": "my value",
+                  "valueboolean": false
                 },
               "schema": { "$ref": "#/definitions/payloaddef" }
             }
@@ -55,30 +55,30 @@
           "items": {
             "maxLength": 64,
             "type": "string",
-            "enum": ["oic.r.test-sensor"]
+            "enum": ["oic.r.test.sensor"]
           },
           "minItems": 1,
           "uniqueItems": true,
           "readOnly": true,
           "type": "array"
         },
-        "value-boolean" : {
+        "valueboolean" : {
           "description": "on/off",
           "type": "boolean"
         },
-        "value-integer" : {
+        "valueinteger" : {
           "description": "value integer.",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"
         },
-        "value-number" : {
+        "valuenumber" : {
           "description": "value number.",
           "maximum": 100.0,
           "minimum": 0.0,
           "type": "number"
         },
-        "value-string" : {
+        "valuestring" : {
           "description": "value string.",
           "type": "string"
         },
@@ -104,7 +104,7 @@
         }
       },
       "type" : "object",
-      "required": ["value-string", "value-boolean","value-integer", "value-number"]
+      "required": ["valuestring", "valueboolean","valueinteger", "valuenumber"]
     }
   }
 }
