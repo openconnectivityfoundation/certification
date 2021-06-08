@@ -1,0 +1,30 @@
+[
+ {
+    "filename": "query-test.swagger.json",
+    "rt": [
+      "oic.r.test.query"
+    ],
+    "title": "Query Test"
+  },
+  {
+    "filename": "range-test.swagger.json",
+    "rt": [
+      "oic.r.test.range"
+    ],
+    "title": "Range Test"
+  },
+  {
+    "filename": "sensor-test.swagger.json",
+    "rt": [
+      "oic.r.test.sensor"
+    ],
+    "title": "test sensor"
+  },
+  {
+    "filename": "variant-test.swagger.json",
+    "rt": [
+      "oic.r.test.variant"
+    ],
+    "title": "test variants"
+  }
+]
