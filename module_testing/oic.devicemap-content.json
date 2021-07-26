@@ -1,6 +1,6 @@
 [
   {
-    "devicename": "Module Test - Actuator Device",
+    "devicename": "Module (Sensor and Actuator)",
     "devicetype": "oic.d.test.module.actuator",
     "vertical":   "Module",
     "resources": [
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "devicename": "Module Test - Sensor Device",
+    "devicename": "Module (Sensor)",
     "devicetype": "oic.d.test.module.sensor",
     "vertical":   "Module",
     "resources": [
